@@ -1,0 +1,31 @@
+@host = http://localhost:5161
+
+POST {{host}}/api/ai/summarize
+Content-Type: application/json
+
+{
+  "notes": "Anna: demo klar fredag. Erik fixar login-buggen. Vi beslutade att skjuta upp betalningsfunktionen till nästa sprint."
+}
+
+###
+
+POST {{host}}/api/ai/agenda
+Content-Type: application/json
+
+{
+  "title": "Sprintplanering vecka 38",
+  "durationMinutes": 60,
+  "topics": "Retro av förra sprinten, prioritera backlog, fördela ansvar"
+}
+
+###
+
+POST {{host}}/api/ai/invitation
+Content-Type: application/json
+
+{
+  "title": "Sprintplanering vecka 38",
+  "dateTime": "torsdag 10:00–11:00",
+  "location": "konferensrum Orion",
+  "purpose": "Planera kommande sprint, prioritera arbetsuppgifter och fördela ansvar"
+}
